@@ -1,0 +1,43 @@
+#!/bin/bash
+
+echo 'Starting Up Server'
+echo 'Startup version 1.2'
+
+sleep 1
+
+clear
+
+echo 'Getting into the propper directory!'
+
+cd
+cd bungeecord/
+
+echo 'Done!'
+sleep 1
+
+echo 'Deleting old BungeeCord'
+
+rm BungeeCord.jar
+
+echo 'Done!'
+
+sleep 1
+
+echo 'Deleting Old Log Files'
+
+rm proxy.log.0
+echo 'One Done...'
+
+rm proxy.log.0.lck
+echo 'Two Done...'
+
+echo 'All clean!'
+
+
+sleep 1
+echo 'Hold on while I grab the latest jars in /latestjars'
+cp ~/latestjars/BungeeCord.jar BungeeCord.jar
+
+echo 'Ok lets continue with startup'
+./bungeestart.sh
+

@@ -1,0 +1,78 @@
+#!/bin/bash
+clear
+
+echo "Wartorn Full Startup Version 1.3 Alpha"
+echo ""
+echo "This takes care of all the hard work"
+read -p "Press any Key to continue with Boot"
+
+clear
+
+echo "Checking up on our rockets"
+echo "."
+sleep 1
+clear 
+echo "Checking up on our rockets"
+echo ".."
+sleep 1
+clear
+echo "Checking up on our rockets"
+echo "..."
+sleep 1
+clear
+echo "Checking up on our rockets"
+echo "."
+sleep 1
+clear 
+echo "Checking up on our rockets"
+echo ".."
+sleep 1
+clear
+echo "Checking up on our rockets"
+echo "..."
+sleep 1
+
+echo "Clear for liftoff!"
+clear
+echo "Clear for liftoff!"
+echo "
+   __
+   \ \_____
+###[==_____>
+   /_/ 
+   "
+sleep 5
+clear
+
+echo "Time to setup the hard stuff"
+sleep 1
+echo "Makeing a TMUX session"
+
+tmux new-session -d -s 'Wartorn'
+
+echo "Started Session Wartorn in TMUX"
+sleep 1
+clear
+
+echo "Sending Bungee Startup..."
+
+tmux send -t Wartorn:0 ./bungeecord/start.sh ENTER
+
+sleep 1
+echo "Done!"
+
+clear
+
+echo "Making New Window for Spigot!"
+
+tmux new-window -t Wartorn
+
+sleep 1
+echo "Done!"
+
+echo "Sending Spigot Startup..."
+
+tmux send -t Wartorn:1 ./spigot_base/start.sh ENTER
+
+sleep 1
+echo "Done!"

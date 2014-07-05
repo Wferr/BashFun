@@ -1,0 +1,38 @@
+#!/bin/bash
+clear
+
+echo "Auto Update Magic Thingie Base 1.2"
+read -p "Press any key to continue..."
+
+clear
+echo "moveing to propper directory..."
+cd /home/minecraft/latestjars
+
+echo "Awesome! We are here!"
+
+sleep 2
+
+echo "Cleaning up old Jar files"
+rm spigot.jar
+rm BungeeCord.jar
+echo "Cleaned!"
+
+sleep 2
+
+clear
+
+echo "Time to get downloading!"
+
+clear
+
+echo "Downloading Spigot"
+wget http://ci.md-5.net/job/Spigot/lastBuild/artifact/Spigot-Server/target/spigot.jar
+
+echo "Downloading Bungeecord"
+wget http://ci.md-5.net/job/BungeeCord/lastBuild/artifact/bootstrap/target/BungeeCord.jar
+
+echo "Done chmodding jars"
+chmod 755 spigot.jar
+chmod 775 BungeeCord.jar
+
+echo "Done!"

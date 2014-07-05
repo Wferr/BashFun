@@ -1,0 +1,26 @@
+#!/bin/bash
+echo 'Starting Up Server'
+echo 'Startup version 1.1'
+sleep 1
+
+echo 'Getting in the propper directory'
+cd
+cd spigot_base/
+echo 'Done!'
+
+sleep 1
+
+clear
+
+echo 'Deleting old spigot'
+rm spigot.jar
+echo 'Done!'
+
+
+sleep 1
+echo 'Hold on while I grab the latest jars in /latestjars'
+cp ~/latestjars/spigot.jar spigot.jar
+
+echo 'Ok lets continue with startup'
+./spigotstart.sh
+
