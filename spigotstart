@@ -10,8 +10,6 @@ echo 'Done!'
 
 sleep 1
 
-clear
-
 echo 'Deleting old spigot'
 rm spigot.jar
 echo 'Done!'

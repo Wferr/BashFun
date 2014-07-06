@@ -1,5 +1,5 @@
 #!/bin/bash
-
+#Bungee Cord Startup Script
 echo 'Starting Up Server'
 echo 'Startup version 1.2'
 
@@ -7,7 +7,7 @@ sleep 1
 
 clear
 
-echo 'Getting into the propper directory!'
+echo 'Getting into the proper directory!'
 
 cd
 cd bungeecord/

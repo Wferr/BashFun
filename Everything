@@ -44,35 +44,49 @@ echo "
 sleep 5
 clear
 
+
+
+
+
+#Starting The TMUX Session Down here
+
 echo "Time to setup the hard stuff"
 sleep 1
 echo "Makeing a TMUX session"
 
+#Make a TMUX Session called Wartorn
 tmux new-session -d -s 'Wartorn'
 
 echo "Started Session Wartorn in TMUX"
-sleep 1
-clear
+
 
 echo "Sending Bungee Startup..."
 
+#Send the command to Wartorn Window 0 to run startup script
 tmux send -t Wartorn:0 ./bungeecord/start.sh ENTER
 
-sleep 1
 echo "Done!"
 
-clear
 
 echo "Making New Window for Spigot!"
 
+#Makes a new window for spigot to run in
 tmux new-window -t Wartorn
 
-sleep 1
 echo "Done!"
 
 echo "Sending Spigot Startup..."
 
+#Sends Startup for Spigot Server
 tmux send -t Wartorn:1 ./spigot_base/start.sh ENTER
 
 sleep 1
 echo "Done!"
+
+
+echo "If there were no errors it was a successfully boot"
+echo ""
+echo "Thanks"
+sleep 5
+clear
+#all done!
