@@ -51,14 +51,25 @@ clear
 #Starting The TMUX Session Down here
 
 echo "Time to setup the hard stuff"
+echo "Checking session exists"
 sleep 1
+
+if tmux has-session -t Wartorn &> /dev/null
+    then
+    echo "Session exists! Exiting!"
+    exit
+fi
+
+sleep 1
+echo "Session doesnt exist! Continueing with boot!"
+
 echo "Makeing a TMUX session"
 
 #Make a TMUX Session called Wartorn
 tmux new-session -d -s 'Wartorn'
 
 echo "Started Session Wartorn in TMUX"
-
+nano
 
 echo "Sending Bungee Startup..."
 
