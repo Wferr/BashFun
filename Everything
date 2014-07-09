@@ -68,7 +68,6 @@ echo "Makeing a TMUX session"
 tmux new-session -d -s 'Wartorn'
 
 echo "Started Session Wartorn in TMUX"
-nano
 
 echo "Sending Bungee Startup..."
 
