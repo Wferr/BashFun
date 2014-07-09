@@ -1,21 +1,53 @@
 #!/bin/bash
 clear
 
-echo "Auto Update Magic Thingie Base 1.2"
+echo "Auto Update Magic Thingie Base 1.3"
 read -p "Press any key to continue..."
 
 clear
-echo "moveing to propper directory..."
-cd /home/minecraft/latestjars
+
+echo "Checking if /latestjars exists under current user..."
+
+#Move to home directory
+cd $HOME
+
+#Check if directory latest jars exists
+if [ ! -d "/latestjars" ];  &> /dev/null
+  then
+  mkdir latestjars/
+  echo "Directory didnt exist"
+  echo "Directory created"
+fi
+
+echo "Moving to popper directory..."
+cd ~/latestjars
 
 echo "Awesome! We are here!"
 
 sleep 2
 
-echo "Cleaning up old Jar files"
-rm spigot.jar
-rm BungeeCord.jar
-echo "Cleaned!"
+echo "Checking if spigot.jar Exists"
+if [[ -e spigot.jar ]]; &> /dev/null
+	then
+	echo "spigot.jar already exists.."
+	echo "Deleteing"
+	rm spigot.jar
+	echo "Done!"
+	sleep 1
+fi
+
+echo "Checking if BungeeCord.jar Exists"
+if [[ -e BungeeCord.jar ]]; &> /dev/null
+	then
+	echo "BungeeCord.jar already exists.."
+	echo "Deleteing"
+	rm BungeeCord.jar
+	echo "Done!"
+	sleep 1
+fi
+
+
+echo "Cleaned up old Jar files"
 
 sleep 2
 

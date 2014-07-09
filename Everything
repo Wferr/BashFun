@@ -8,6 +8,7 @@ read -p "Press any Key to continue with Boot"
 
 clear
 
+#Start Useless Crap
 echo "Checking up on our rockets"
 echo "."
 sleep 1
@@ -42,11 +43,9 @@ echo "
    /_/ 
    "
 sleep 5
+#End Useless Crap
+
 clear
-
-
-
-
 
 #Starting The TMUX Session Down here
 
@@ -94,10 +93,11 @@ tmux send -t Wartorn:1 ./spigot_base/start.sh ENTER
 sleep 1
 echo "Done!"
 
-
 echo "If there were no errors it was a successfully boot"
 echo ""
 echo "Thanks"
+
 sleep 5
 clear
+
 #all done!
