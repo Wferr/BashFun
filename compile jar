@@ -1,0 +1,13 @@
+#!/bin/bash
+#This Grabs a github Repo and builds it under a directory called "building" and$
+
+echo "Building the jar file from the repository $1"
+
+cd
+mkdir building
+git clone $1 building
+cd building
+mvn clean install
+cd
+mv building/target/*.jar built
+rm -r -rf building
