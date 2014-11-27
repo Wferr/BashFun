@@ -6,7 +6,7 @@ echo ""
 echo "By Wferr"
 sleep 5
 
-NOW=$(date +"%d-%m-%y")
+NOW=$(date +"%m-%d-%y")
 FILE="$NOW.tar.gz"
 
 #Get into Directory to GZIP up!
